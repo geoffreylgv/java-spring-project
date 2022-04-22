@@ -14,6 +14,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -22,6 +23,9 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class WeatherResponseHttpClient {
+
+    @Autowired
+    private JsonConvertion jsonConvertion;
 
     private String API_URL = "https://api.openweathermap.org/data/2.5/weather?q=";
     private String API_KEY = "";
@@ -47,7 +51,9 @@ public class WeatherResponseHttpClient {
 
         CloseableHttpClient httpClient = HttpClients.createDefault();
         CloseableHttpResponse response = httpClient.execute(httpGet);
+        if (response.getStatusLine().getStatusCode() == 200) {
 
+        }
         return weList;
     }
 }
