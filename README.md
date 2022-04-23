@@ -19,5 +19,24 @@
   </table>
 
 
->> #### Use Guide
-<code>git clone https://github.com/geoffreylgv/java-spring-project.git</code>
+>> #### Use Guide/Contribution
+- Star and Fork the repo
+- Create local branch named it <i>yourusername</i>
+- Edit contribute
+- Create pull request
+
+<code>
+  git branch <i>your username</i>
+  git clone https://github.com/_yourusername_/java-spring-project.git
+</code>
+
+
+>> #### Repo Navigation/Repo Structure
+
+|java-spring-project |
+---------------------|pom.xml         |
+                     |----------------|
+                     |weather-java-web|
+                     |----------------|
+                                      
+                           
