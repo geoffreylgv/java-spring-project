@@ -35,11 +35,11 @@
 
 >> #### Repo Navigation/Repo Structure
 
+```bash
 |java-spring-project |
 ---------------------|pom.xml         |
                      |----------------|
                      |weather-java-web|
                      |----------------|
-                                      
-                           
-
+```                                      
+   
