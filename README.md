@@ -17,6 +17,7 @@
       <td>Angular</td>
     </tr>
   </table>
-  
 
 
+>> #### Use Guide
+<code>git clone https://github.com/geoffreylgv/java-spring-project.git</code>
