@@ -1,5 +1,5 @@
 # java-spring-project
->> ## Repository Description Content
+>> #### Repository Description Content
   +  Spring Boot, 
   +  Java API REST, 
   +  Java Web Application, 
@@ -10,11 +10,13 @@
   </thead>
   <tbody>
     <tr>
-      <td>Java</td>
+      <td rowspan="2">Java</td>
       <td>Apache Wicket</td>
     </tr>
     <tr>
-      <td>Java</td>
       <td>Angular</td>
     </tr>
   </table>
+  
+
+
