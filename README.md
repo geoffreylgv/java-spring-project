@@ -25,10 +25,12 @@
 - Edit contribute
 - Create pull request
 
-<code>
-  git branch <i>your username</i>
-  git clone https://github.com/_yourusername_/java-spring-project.git
-</code>
+```bash
+  # create branch
+  $ git checkout -b your_username
+  # clone the forked repo
+  $ git clone https://github.com/_yourusername_/java-spring-project.git
+```
 
 
 >> #### Repo Navigation/Repo Structure
@@ -40,3 +42,4 @@
                      |----------------|
                                       
                            
+
