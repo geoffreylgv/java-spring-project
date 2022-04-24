@@ -346,163 +346,191 @@ date.setText(dateString): String currentDateTimeString = DateFormat.getDateTimeI
         legend+* {
             clear: left;
         }
-.container,
-.container-xxl,
-.container-xl,
-.container-lg,
-.container-md,
-.container-sm {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-}
 
-@media (min-width: 576px) {
-  .container-sm, .container {
-    max-width: 540px;
-  }
-}
-@media (min-width: 768px) {
-  .container-md, .container-sm, .container {
-    max-width: 720px;
-  }
-}
-@media (min-width: 992px) {
-  .container-lg, .container-md, .container-sm, .container {
-    max-width: 960px;
-  }
-}
-@media (min-width: 1200px) {
-  .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1140px;
-  }
-}
-@media (min-width: 1400px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1320px;
-  }
-}
-.row {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * var(--bs-gutter-y));
-  margin-right: calc(-0.5 * var(--bs-gutter-x));
-  margin-left: calc(-0.5 * var(--bs-gutter-x));
-}
-.row > * {
-  flex-shrink: 0;
-  width: 100%;
-  max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
-  margin-top: var(--bs-gutter-y);
-}
+        .container,
+        .container-xxl,
+        .container-xl,
+        .container-lg,
+        .container-md,
+        .container-sm {
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+        }
 
-.col {
-  flex: 1 0 0%;
-}
+        @media (min-width: 576px) {
 
-.row-cols-auto > * {
-  flex: 0 0 auto;
-  width: auto;
-}
+            .container-sm,
+            .container {
+                max-width: 540px;
+            }
+        }
 
-.row-cols-1 > * {
-  flex: 0 0 auto;
-  width: 100%;
-}
+        @media (min-width: 768px) {
 
-.row-cols-2 > * {
-  flex: 0 0 auto;
-  width: 50%;
-}
+            .container-md,
+            .container-sm,
+            .container {
+                max-width: 720px;
+            }
+        }
 
-.row-cols-3 > * {
-  flex: 0 0 auto;
-  width: 33.3333333333%;
-}
+        @media (min-width: 992px) {
 
-.row-cols-4 > * {
-  flex: 0 0 auto;
-  width: 25%;
-}
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container {
+                max-width: 960px;
+            }
+        }
 
-.row-cols-5 > * {
-  flex: 0 0 auto;
-  width: 20%;
-}
+        @media (min-width: 1200px) {
 
-.row-cols-6 > * {
-  flex: 0 0 auto;
-  width: 16.6666666667%;
-}
+            .container-xl,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container {
+                max-width: 1140px;
+            }
+        }
 
-.col-auto {
-  flex: 0 0 auto;
-  width: auto;
-}
+        @media (min-width: 1400px) {
 
-.col-1 {
-  flex: 0 0 auto;
-  width: 8.33333333%;
-}
+            .container-xxl,
+            .container-xl,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container {
+                max-width: 1320px;
+            }
+        }
 
-.col-2 {
-  flex: 0 0 auto;
-  width: 16.66666667%;
-}
+        .row {
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: calc(-1 * var(--bs-gutter-y));
+            margin-right: calc(-0.5 * var(--bs-gutter-x));
+            margin-left: calc(-0.5 * var(--bs-gutter-x));
+        }
 
-.col-3 {
-  flex: 0 0 auto;
-  width: 25%;
-}
+        .row>* {
+            flex-shrink: 0;
+            width: 100%;
+            max-width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * 0.5);
+            padding-left: calc(var(--bs-gutter-x) * 0.5);
+            margin-top: var(--bs-gutter-y);
+        }
 
-.col-4 {
-  flex: 0 0 auto;
-  width: 33.33333333%;
-}
+        .col {
+            flex: 1 0 0%;
+        }
 
-.col-5 {
-  flex: 0 0 auto;
-  width: 41.66666667%;
-}
+        .row-cols-auto>* {
+            flex: 0 0 auto;
+            width: auto;
+        }
 
-.col-6 {
-  flex: 0 0 auto;
-  width: 50%;
-}
+        .row-cols-1>* {
+            flex: 0 0 auto;
+            width: 100%;
+        }
 
-.col-7 {
-  flex: 0 0 auto;
-  width: 58.33333333%;
-}
+        .row-cols-2>* {
+            flex: 0 0 auto;
+            width: 50%;
+        }
 
-.col-8 {
-  flex: 0 0 auto;
-  width: 66.66666667%;
-}
+        .row-cols-3>* {
+            flex: 0 0 auto;
+            width: 33.3333333333%;
+        }
 
-.col-9 {
-  flex: 0 0 auto;
-  width: 75%;
-}
+        .row-cols-4>* {
+            flex: 0 0 auto;
+            width: 25%;
+        }
 
-.col-10 {
-  flex: 0 0 auto;
-  width: 83.33333333%;
-}
+        .row-cols-5>* {
+            flex: 0 0 auto;
+            width: 20%;
+        }
 
-.col-11 {
-  flex: 0 0 auto;
-  width: 91.66666667%;
-}
+        .row-cols-6>* {
+            flex: 0 0 auto;
+            width: 16.6666666667%;
+        }
 
-.col-12 {
-  flex: 0 0 auto;
-  width: 100%;
-}
+        .col-auto {
+            flex: 0 0 auto;
+            width: auto;
+        }
+
+        .col-1 {
+            flex: 0 0 auto;
+            width: 8.33333333%;
+        }
+
+        .col-2 {
+            flex: 0 0 auto;
+            width: 16.66666667%;
+        }
+
+        .col-3 {
+            flex: 0 0 auto;
+            width: 25%;
+        }
+
+        .col-4 {
+            flex: 0 0 auto;
+            width: 33.33333333%;
+        }
+
+        .col-5 {
+            flex: 0 0 auto;
+            width: 41.66666667%;
+        }
+
+        .col-6 {
+            flex: 0 0 auto;
+            width: 50%;
+        }
+
+        .col-7 {
+            flex: 0 0 auto;
+            width: 58.33333333%;
+        }
+
+        .col-8 {
+            flex: 0 0 auto;
+            width: 66.66666667%;
+        }
+
+        .col-9 {
+            flex: 0 0 auto;
+            width: 75%;
+        }
+
+        .col-10 {
+            flex: 0 0 auto;
+            width: 83.33333333%;
+        }
+
+        .col-11 {
+            flex: 0 0 auto;
+            width: 91.66666667%;
+        }
+
+        .col-12 {
+            flex: 0 0 auto;
+            width: 100%;
+        }
+
         /*-------- End General css -------*/
         /*-------- Content css -------*/
         .container-fluid {
@@ -542,8 +570,9 @@ date.setText(dateString): String currentDateTimeString = DateFormat.getDateTimeI
             box-shadow: 0 16px 40px #7ba4e833;
             /*            width: 778px;*/
         }
+
         .app-name {
-            margin-top:8px;
+            margin-top: 8px;
             font-family: 'Montserrat';
             font-style: normal;
             font-weight: 700;
@@ -553,6 +582,7 @@ date.setText(dateString): String currentDateTimeString = DateFormat.getDateTimeI
             letter-spacing: 0.06em;
             color: #485F85;
         }
+
         .dot {
             border: 10px solid #7BA4E8;
             border-radius: 30px;
@@ -562,6 +592,7 @@ date.setText(dateString): String currentDateTimeString = DateFormat.getDateTimeI
             text-decoration: none;
             white-space: nowrap;
         }
+
         /*-------- End Content css -------*/
         /* -----------
         
