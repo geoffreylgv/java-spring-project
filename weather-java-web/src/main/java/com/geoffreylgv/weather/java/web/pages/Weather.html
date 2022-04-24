@@ -1,12 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+<!--SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-yyyy'T'HH:mm"):
+String dateString = sdf.format(weatherResponse.getDt()*1000):
+date.setText(dateString): String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date(weatherResponse.getDt()*1000));
+            date.setText(currentDateTimeString);-->
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java Weather App</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Weather App </title>
+    <link href='https://fonts.googleapis.com/css?family=Monsserat' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+          * {
+            padding: 0;
+            margin: 0;
+            color: #FFF;
+        }
+        span {
+            display: inline-block;
+        }
+        
+        body {
+            height: 100%;
+            font-family: "Monsserat", sans-serif;
+            color: #485f85;
+            background-color: #ededed;
+        }
+        
+        .container-fluid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            min-height: 400px;
+            max-height: 100vh;
+            background-color: #f5f8fd;
+            overflow: hidden;
+        }
+        
+        .main-content {
+            z-index: 1;
+            width: calc(100% - 40px);
+            max-width: 600px;
+            height: 300px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 16px 40px #7ba4e833;
+            width: 778px;
+        }
+        
+        /* -----------
+        
+height: 370px;
+left: 341px;
+top: 337px;
+        ------------------ */
+ 
+        
+        
+    </style>
 </head>
+
 <body>
-    
+    <div class="container-fluid">
+        <div class="main-content">
+            
+        </div>
+    </div>
 </body>
+
 </html>
