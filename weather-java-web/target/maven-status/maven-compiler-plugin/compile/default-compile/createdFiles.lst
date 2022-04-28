@@ -1,9 +1,11 @@
-com\geoffreylgv\weather\java\web\model\Main.class
 com\geoffreylgv\weather\java\web\model\WeatherResponse.class
-com\geoffreylgv\weather\java\web\model\Wind.class
 com\geoffreylgv\weather\java\web\model\Weather.class
 com\geoffreylgv\weather\java\web\services\JsonConvertion.class
 com\geoffreylgv\weather\java\web\WeatherJavaWeb.class
 com\geoffreylgv\weather\java\web\model\Sys.class
-com\geoffreylgv\weather\java\web\model\Coord.class
+com\geoffreylgv\weather\java\web\pages\WeatherPage.class
 com\geoffreylgv\weather\java\web\services\WeatherResponseHttpClient.class
+com\geoffreylgv\weather\java\web\model\Main.class
+com\geoffreylgv\weather\java\web\base\BasePage.class
+com\geoffreylgv\weather\java\web\model\Wind.class
+com\geoffreylgv\weather\java\web\model\Coord.class
