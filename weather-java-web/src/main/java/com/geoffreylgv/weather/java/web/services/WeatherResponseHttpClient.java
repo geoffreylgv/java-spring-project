@@ -5,9 +5,9 @@
  */
 package com.geoffreylgv.weather.java.web.services;
 
+import com.geoffreylgv.weather.java.web.model.Main;
+import com.geoffreylgv.weather.java.web.model.Sys;
 import com.geoffreylgv.weather.java.web.model.WeatherResponse;
-import java.util.LinkedList;
-import java.util.List;
 import lombok.SneakyThrows;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -38,22 +38,30 @@ public class WeatherResponseHttpClient {
 
     //api full url
     private String getFullUrl(String uri) {
-        String url = API_URL + uri + "&appid=" + API_KEY;
+        String url = API_URL + uri + "&units=metric&appid=" + API_KEY;
         return url;
     }
 
     //get weather data response (all data)
     @SneakyThrows
-    public List<WeatherResponse> getWeatherResponseByCity(String city) {
-        List<WeatherResponse> weList = new LinkedList<>();
+    public WeatherResponse getWeatherResponseByCity(String city) {
+        WeatherResponse weatherResponse = new WeatherResponse();
+        Main main = new Main();
+        Sys sys = new Sys();
 
         HttpGet httpGet = new HttpGet(getFullUrl(city));
 
         CloseableHttpClient httpClient = HttpClients.createDefault();
         CloseableHttpResponse response = httpClient.execute(httpGet);
-        if (response.getStatusLine().getStatusCode() == 200) {
-
-        }
-        return weList;
+//        if (response.getStatusLine().getStatusCode() == 200) {
+//            HttpEntity entity = response.getEntity();
+//            JSONObject jsonObject = new JSONObject(EntityUtils.toString(entity));
+//            weatherResponse = jsonObject.
+//            JSONArray jsonArray = jsonObject.optJSONObject("weather").optJSONArray("");
+//            for (int i = 0; i < jsonArray.length(); i++) {
+//                weList.add(jsonConvertion.jsonToWeatherResponse((JSONObject) jsonArray.get(i)));
+//            }
+//        }
+        return weatherResponse;
     }
 }
