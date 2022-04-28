@@ -8,12 +8,15 @@ package com.geoffreylgv.weather.java.web.services;
 import com.geoffreylgv.weather.java.web.model.Main;
 import com.geoffreylgv.weather.java.web.model.Sys;
 import com.geoffreylgv.weather.java.web.model.WeatherResponse;
+import com.github.openjson.JSONObject;
 import lombok.SneakyThrows;
+import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -53,15 +56,11 @@ public class WeatherResponseHttpClient {
 
         CloseableHttpClient httpClient = HttpClients.createDefault();
         CloseableHttpResponse response = httpClient.execute(httpGet);
-//        if (response.getStatusLine().getStatusCode() == 200) {
-//            HttpEntity entity = response.getEntity();
-//            JSONObject jsonObject = new JSONObject(EntityUtils.toString(entity));
-//            weatherResponse = jsonObject.
-//            JSONArray jsonArray = jsonObject.optJSONObject("weather").optJSONArray("");
-//            for (int i = 0; i < jsonArray.length(); i++) {
-//                weList.add(jsonConvertion.jsonToWeatherResponse((JSONObject) jsonArray.get(i)));
-//            }
-//        }
+        if (response.getStatusLine().getStatusCode() == 200) {
+            HttpEntity entity = response.getEntity();
+            JSONObject jsonObject = new JSONObject(EntityUtils.toString(entity));
+            weatherResponse = jsonConvertion.jsonToWeatherResponse(jsonObject);
+       }
         return weatherResponse;
     }
 }
