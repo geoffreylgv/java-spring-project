@@ -40,7 +40,6 @@ public class WeatherPage extends BasePage {
         Form form = new Form("searchForm", new CompoundPropertyModel(this));
         form.add(feedback);
 
-
     }
 
 }

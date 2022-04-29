@@ -9,6 +9,7 @@ import com.geoffreylgv.weather.java.web.model.Main;
 import com.geoffreylgv.weather.java.web.model.Sys;
 import com.geoffreylgv.weather.java.web.model.WeatherResponse;
 import com.github.openjson.JSONObject;
+import java.util.logging.Logger;
 import lombok.SneakyThrows;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -29,6 +30,8 @@ public class WeatherResponseHttpClient {
 
     @Autowired
     private JsonConvertion jsonConvertion;
+
+    private static final Logger LOG = Logger.getLogger(WeatherResponseHttpClient.class.getName());
 
     private String API_URL = "https://api.openweathermap.org/data/2.5/weather?q=";
     private String API_KEY = "";
@@ -60,7 +63,7 @@ public class WeatherResponseHttpClient {
             HttpEntity entity = response.getEntity();
             JSONObject jsonObject = new JSONObject(EntityUtils.toString(entity));
             weatherResponse = jsonConvertion.jsonToWeatherResponse(jsonObject);
-       }
+        }
         return weatherResponse;
     }
 }

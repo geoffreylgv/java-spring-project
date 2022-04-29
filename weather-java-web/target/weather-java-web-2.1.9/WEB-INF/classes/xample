@@ -1,0 +1,15 @@
+
+JSONObject jsonObj = new JSONObject(result);
+JSONObject main = jsonObj.getJSONObject("main");
+JSONObject sys = jsonObj.getJSONObject("sys");
+JSONObject wind = jsonObj.getJSONObject("wind");
+JSONObject weather = jsonObj.getJSONArray("weather").getJSONObject(0);
+
+Long updatedAt = jsonObj.getLong("dt");
+String temp = main.getString("temp") + "°C";
+String temp_min = "Min Temp: " + main.getString("temp_min") + "°C";
+String temp_max = "Max Temp: " + main.getString("temp_max") + "°C";
+String description = weather.getString("description");
+String mainW = weather.getString("main");
+String country = sys.getString("country");
+String name = jsonObj.getString("name");

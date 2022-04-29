@@ -8,4 +8,5 @@ com\geoffreylgv\weather\java\web\services\WeatherResponseHttpClient.class
 com\geoffreylgv\weather\java\web\model\Main.class
 com\geoffreylgv\weather\java\web\base\BasePage.class
 com\geoffreylgv\weather\java\web\model\Wind.class
+.netbeans_automatic_build
 com\geoffreylgv\weather\java\web\model\Coord.class
