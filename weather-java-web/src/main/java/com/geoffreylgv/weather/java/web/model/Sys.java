@@ -19,8 +19,7 @@ import lombok.NoArgsConstructor;
 public class Sys {
 
     private Long id;
-    private Long type;
-    private Long message;
+    private Long sunrise;
     private String country;
     private Long sunset;
 }

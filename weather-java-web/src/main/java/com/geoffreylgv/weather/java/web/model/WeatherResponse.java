@@ -22,12 +22,12 @@ public class WeatherResponse {
     private Long cod;
     private String name;
     private Long timezone;
-    private Long dt;
+    /*private Long dt;
     private Long visibility;
-    private String base;
+    private String base;*/
     private Weather weather;
-    private Coord coord;
-    private Main main;
+/*    private Coord coord;
+    private Main main;*/
     private Wind wind;
     private Sys sys;
 }

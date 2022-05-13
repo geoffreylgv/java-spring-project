@@ -22,7 +22,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class JsonConvertion {
 
-    public Coord jsonToCoord(JSONObject jsonObject) throws ParseException {
+    public Coord jsonToCoord(JSONObject jsonObject) {
 
         Coord c = new Coord();
         c.setLat(jsonObject.optLong("lat"));
@@ -30,7 +30,7 @@ public class JsonConvertion {
         return c;
     }
 
-    public Main jsonToMain(JSONObject jsonObject) throws ParseException {
+    public Main jsonToMain(JSONObject jsonObject) {
 
         Main m = new Main();
         m.setFeels_like(jsonObject.optLong("feels_like"));
@@ -47,13 +47,11 @@ public class JsonConvertion {
         Sys s = new Sys();
         s.setId(jsonObject.optLong("id"));
         s.setCountry(jsonObject.optString("country"));
-        s.setMessage(jsonObject.optLong("message"));
         s.setSunset(jsonObject.optLong("sunset"));
-        s.setType(jsonObject.optLong("type"));
         return s;
     }
 
-    public Weather jsonToWeather(JSONObject jsonObject) throws ParseException {
+    public Weather jsonToWeather(JSONObject jsonObject) {
 
         Weather w = new Weather();
         w.setId(jsonObject.optLong("id"));
@@ -63,7 +61,7 @@ public class JsonConvertion {
         return w;
     }
 
-    public Wind jsonToWind(JSONObject jsonObject) throws ParseException {
+    public Wind jsonToWind(JSONObject jsonObject) {
 
         Wind wi = new Wind();
         wi.setDeg(jsonObject.optLong("deg"));
@@ -71,19 +69,19 @@ public class JsonConvertion {
         return wi;
     }
 
-    public WeatherResponse jsonToWeatherResponse(JSONObject jsonObject) throws ParseException {
+    public WeatherResponse jsonToWeatherResponse(JSONObject jsonObject) {
 
         WeatherResponse wr = new WeatherResponse();
         wr.setId(jsonObject.optLong("id"));
         wr.setCod(jsonObject.optLong("cod"));
         wr.setName(jsonObject.optString("name"));
         wr.setTimezone(jsonObject.optLong("timezone"));
-        wr.setDt(jsonObject.optLong("dt"));
+        /*wr.setDt(jsonObject.optLong("dt"));
         wr.setVisibility(jsonObject.optLong("visibility"));
-        wr.setBase(jsonObject.optString("base"));
+        wr.setBase(jsonObject.optString("base"));*/
         wr.setWeather(jsonToWeather(jsonObject.getJSONObject("weather")));
-        wr.setCoord(jsonToCoord(jsonObject.getJSONObject("coord")));
-        wr.setMain(jsonToMain(jsonObject.getJSONObject("main")));
+        /*wr.setCoord(jsonToCoord(jsonObject.getJSONObject("coord")));
+        wr.setMain(jsonToMain(jsonObject.getJSONObject("main")));*/
         wr.setWind(jsonToWind(jsonObject.getJSONObject("wind")));
         wr.setSys(jsonToSys(jsonObject.getJSONObject("sys")));
         return wr;
